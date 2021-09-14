@@ -107,14 +107,14 @@ security_group_rules | list( object({ name = string direction = string remote = 
 
 ## Module Outputs
 
-Description                                                 | Value
------------------------------------------------------------ | --------------------------------
-ID of VPC created                                           | ibm_is_vpc.vpc.id
-ID of ACL created for subnets                               | ibm_is_network_acl.multizone_acl
-Public gateways created                                     | local.public_gateways
-The IDs of the subnets                                      | module.subnets.ids
-A list of subnets containing names, CIDR blocks, and zones. | module.subnets.detail_list
-A list containing subnet IDs and subnet zones               | module.subnets.zone_list
+Name               | Description                                                 | Value
+------------------ | ----------------------------------------------------------- | --------------------------------
+vpc_id             | ID of VPC created                                           | ibm_is_vpc.vpc.id
+acl_id             | ID of ACL created for subnets                               | ibm_is_network_acl.multizone_acl
+public_gateways    | Public gateways created                                     | local.public_gateways
+subnet_ids         | The IDs of the subnets                                      | module.subnets.ids
+subnet_detail_list | A list of subnets containing names, CIDR blocks, and zones. | module.subnets.detail_list
+subnet_zone_list   | A list containing subnet IDs and subnet zones               | module.subnets.zone_list
 
 ---
 
