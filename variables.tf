@@ -3,10 +3,17 @@
 # Copyright 2020 IBM
 ##############################################################################
 
-variable ibmcloud_api_key {
-  description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
-  type        = string
-  sensitive   = true
+# Uncomment this variable if running locally
+# variable ibmcloud_api_key {
+#   description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
+#   type        = string
+#   sensitive   = true
+# }
+
+# Comment out if not running in schematics
+variable TF_VERSION {
+ default     = "1.0"
+ description = "The version of the Terraform engine that's used in the Schematics workspace."
 }
 
 variable prefix {
@@ -70,21 +77,27 @@ variable subnets {
     }))
   })
   default = {
-    zone-1 = [{
-      name           = "subnet-a"
-      cidr           = "10.10.10.0/24"
-      public_gateway = true
-    }],
-    zone-2 = [{
-      name           = "subnet-b"
-      cidr           = "10.20.10.0/24"
-      public_gateway = true
-    }],
-    zone-3 = [{
-      name           = "subnet-c"
-      cidr           = "10.30.10.0/24"
-      public_gateway = true
-    }]
+    zone-1 = [
+      {
+        name           = "subnet-a"
+        cidr           = "10.10.10.0/24"
+        public_gateway = true
+      }
+    ],
+    zone-2 = [
+      {
+        name           = "subnet-b"
+        cidr           = "10.20.10.0/24"
+        public_gateway = true
+      }
+    ],
+    zone-3 = [
+      {
+        name           = "subnet-c"
+        cidr           = "10.30.10.0/24"
+        public_gateway = true
+      }
+    ]
   }
 
   validation {
