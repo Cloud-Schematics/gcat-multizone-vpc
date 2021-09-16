@@ -1,6 +1,6 @@
 # GCAT Multizone VPC
 
-This module creates a VPC with subnets across 1, 2, or 3 zones, a network ACL, and optionall creates public gateways in those zones.
+This module creates a VPC with subnets across 1, 2, or 3 zones, a network ACL, and optionally creates public gateways in those zones.
 
 ![Multizone VPC](./.docs/multizone.png)
 
