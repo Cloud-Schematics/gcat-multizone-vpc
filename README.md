@@ -9,12 +9,13 @@ This module creates a VPC with subnets across 1, 2, or 3 zones, a network ACL, a
 ## Table of Contents
 
 1. [VPC](##vpc)
-2. [Public Gateways](##public-gateways)
-3. [Network ACL](##network-acl)
-4. [Subnets](##subnets)
-5. [Module Variables](##Module-Variables)
-6. [Module Outputs](##Module-Outputs)
-7. [As A Module in a Larger Architecture](##As-A-Module-in-a-Larger-Architecture)
+2. [Version](##version)
+3. [Public Gateways](##public-gateways)
+4. [Network ACL](##network-acl)
+5. [Subnets](##subnets)
+6. [Module Variables](##Module-Variables)
+7. [Module Outputs](##Module-Outputs)
+8. [As A Module in a Larger Architecture](##As-A-Module-in-a-Larger-Architecture)
 
 ---
 
@@ -30,6 +31,10 @@ Default security group rules are converted from a list to an object to ensure th
 ibm_is_security_group_rule.default_vpc_rule["allow-inbound-ping"]
 ibm_is_security_group_rule.default_vpc_rule["allow-inbound-ssh"]
 ```
+
+### Version
+
+This sample supports Terrform v0.13 and higher.
 
 ---
 
